@@ -16,10 +16,10 @@ l’array non dovrà contenere lo stesso numero più di una volta. -->
         <?php
             // $random = array();
             // for($i = 0; $i < 15; $i++){
-            //     $random[] = rand(1, 50) . '<br>';
+            //     $random[] = rand(1, 50);
             //     $result = array_unique($random);
             // }
-            // print_r($result);
+            // var_dump($result);
             function getArrayRandom($min, $max){
                 $newArray = [];//creo un array vuoto
                 while(count($newArray) < 15){//ciclo con while
