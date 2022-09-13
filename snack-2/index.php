@@ -17,14 +17,24 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
 </head>
 <body>
     <?php
-        $nome = $_GET['name'];
-        $email = $_GET['email'];
-        $age = $_GET['age'];
-        if(strlen($nome) >= 3 && strpos($email, '@') !==false && strpos($email, '.') !== false && is_numeric($age) !== false){
-            echo '<h2>Accesso riuscito!</h2>';
-        } else {
-            echo '<h2>Accesso Negato!</h2>';
-        }    
+        if(isset($_GET['name']) && isset($_GET['email']) && isset($_GET['age'])){
+            //con isset determino se le variabili sono dichiarate, altrimenti passa null
+            $nome = $_GET['name'];
+            $email = $_GET['email'];
+            $age = $_GET['age'];
+            if(strlen($nome) > 3 && strpos($email, '@') !==false && strpos($email, '.') !== false && is_numeric($age) !== false){
+                echo '<h2>Accesso riuscito!</h2>';
+            } else {
+                echo '<h2>Accesso Negato!</h2>';
+            } 
+
+        }else{
+            echo '<h2>Attenzione!Mancano parametri get!</h2>';
+        }
+        
+        
+        
+           
     ?>  
 </body>
 </html>
