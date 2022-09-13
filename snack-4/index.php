@@ -14,6 +14,7 @@ l’array non dovrà contenere lo stesso numero più di una volta. -->
 <body>
     <div>
         <?php
+        set_time_limit(2);//tempo limite per il programma
             // $random = array();
             // for($i = 0; $i < 15; $i++){
             //     $random[] = rand(1, 50);
