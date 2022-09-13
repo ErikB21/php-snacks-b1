@@ -21,17 +21,16 @@ l’array non dovrà contenere lo stesso numero più di una volta. -->
             // }
             // print_r($result);
             function getArrayRandom($min, $max){
-                $newArray = [];
-                while(count($newArray) < 15){
-                    $number = rand($min, $max);
-                    if(!in_array($number, $newArray)){
-                        $newArray[] = $number;
+                $newArray = [];//creo un array vuoto
+                while(count($newArray) < 15){//ciclo con while
+                    $number = rand($min, $max);//creo un numero casuale tramite range(min,max)
+                    if(!in_array($number, $newArray)){//se il numero random non si trova ancora nel array vuoto
+                        $newArray[] = $number;//pushalo
                     }
                 }
-                return print_r($newArray);
+                return var_dump($newArray);//stampo a schermo ciò che ho creato
             }
             getArrayRandom(1, 100);
-            
         ?>
     </div>
 </body>
