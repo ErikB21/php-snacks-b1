@@ -50,6 +50,21 @@ Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
                 ' : ' . $media .
                 '</li>';
             }
+
+            // for( $i = 0; $i < count($studenti); $i++){
+            //     $studenteCorrente = $studenti[$i];
+            //     $somma = 0;
+            //     $voto = $studenteCorrente['voti'];     
+            //     for($j = 0; $j < count($voto); $j++)){
+            //          $somma += $voto[$j];
+            //     }
+            //     $media = $somma / count($voto);
+
+            //     echo '<li>' . $studenteCorrente['nome'] . 
+            //     ' ' . $studenteCorrente['cognome'] . 
+            //     ' : ' . $media .
+            //     '</li>';
+            // }
         ?>
     </ul>
 
